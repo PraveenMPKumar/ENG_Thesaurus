@@ -35,6 +35,7 @@ def if_close_match_exists(w):
     closest_words.extend(get_close_matches(w, data.keys(), 5, 0.8))
     return len(closest_words) > 0
 
+#Program run code
 while True:
     user_input = input("Enter a word :")
     closest_words.clear()
