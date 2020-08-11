@@ -36,8 +36,12 @@ def if_close_match_exists(w):
     return len(closest_words) > 0
 
 #Program run code
+print("Welcome to English Theasaurus CLI App")
+print("Type q! to quit the program")
 while True:
     user_input = input("Enter a word :")
+    if user_input == "q!" or user_input == "Q!":
+        break
     closest_words.clear()
     output = get_meaning(user_input)
     if type(output) == list:
@@ -45,7 +49,3 @@ while True:
             print(word)
     else:
         print(output)
-    to_continue = input("Press q to quit:")
-
-    if to_continue == "q" or to_continue == "Q":
-        break
